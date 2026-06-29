@@ -1,0 +1,13 @@
+# dependencies
+node_modules/
+
+# terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+crash.log
+*.tfvars.json
+
+# misc
+.DS_Store

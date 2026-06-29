@@ -1,0 +1,12 @@
+variable "project" { type = string }
+variable "environment" { type = string }
+variable "execution_role_arn" { type = string }
+variable "task_role_arn" { type = string }
+variable "frontend_image_url" { type = string }
+variable "backend_image_url" { type = string }
+variable "aws_region" { type = string }
+variable "private_subnet_ids" { type = list(string) }
+variable "ecs_tasks_sg_id" { type = string }
+variable "frontend_target_group_arn" { type = string }
+variable "backend_target_group_arn" { type = string }
+variable "alb_dns_name" {type = string}
