@@ -87,11 +87,11 @@ data "aws_ami" "ubuntu" {
 
 # EC2 Instance
 resource "aws_instance" "jenkins" {
-  ami                    = data.aws_ami.ubuntu.id
-  instance_type          = "t3.small"
-  subnet_id              = var.public_subnet_id
-  vpc_security_group_ids = [aws_security_group.jenkins.id]
-  iam_instance_profile   = aws_iam_instance_profile.jenkins.name
+  ami                         = data.aws_ami.ubuntu.id
+  instance_type               = "t3.small"
+  subnet_id                   = var.public_subnet_id
+  vpc_security_group_ids      = [aws_security_group.jenkins.id]
+  iam_instance_profile        = aws_iam_instance_profile.jenkins.name
   associate_public_ip_address = true
 
   user_data = <<-EOF
