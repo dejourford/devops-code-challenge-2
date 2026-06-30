@@ -68,3 +68,14 @@ module "ecs" {
   frontend_target_group_arn = module.alb.frontend_target_group_arn
   backend_target_group_arn  = module.alb.backend_target_group_arn
 }
+
+# Jenkins
+module "jenkins" {
+  source = "./modules/jenkins"
+
+  vpc_id = module.vpc.vpc_id
+  environment = var.environment
+  project = var.project
+  public_subnet_id = module.vpc.public_subnet_ids[0]
+  my_ip = var.my_ip
+}
