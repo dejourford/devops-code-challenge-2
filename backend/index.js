@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 })
 app.get(/.*/, (req, res) => {
     console.log(`${new Date().toISOString()} GET`)
-    res.json({id: ID, deployedVia: "jenkins"})
+    res.json({id: ID, deployedVia: "jenkins-v2"})
 })
 
 app.listen(PORT, () => {
